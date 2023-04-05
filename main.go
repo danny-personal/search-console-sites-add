@@ -19,9 +19,10 @@ type Message struct {
 func SitesAdd(w http.ResponseWriter, r *http.Request) {
 	keyJson := os.Getenv("KEY_JSON")
 	if keyJson == "" {
+		fmt.Println("There's no KEY_JSON.")
 		return
 	} else {
-		fmt.Println("KEY_JSON:OK")
+		fmt.Println("KEY_JSON: OK")
 	}
 
 	var message Message
